@@ -1,0 +1,665 @@
+### Week 1 | DAY 1
+
+**Installation and Basics**
+- Begin by installing VMWARE to create and manage virtual machines.
+- Use Obsidion or Cherry-Tree for taking notes.
+**Understanding Viruses and Attacks**
+- Study the different types of viruses and understand their characteristics.
+- Learn about various types of attacks and how they are executed.
+- Understand the different types of hackers and their motives.
+
+**Linux Basics**
+- Explore the Linux directory structure, where `~` represents the home directory and `/` denotes the root directory.
+- Learn that Linux primarily uses BASH (Bourne Again Shell) and PYTHON for scripting and automation.
+
+### DAY 2
+
+**Shells and Security**
+- Recognize that accessing someone else's terminal or command line interface is referred to as a shell.
+- Understand the difference between non-secure and secure shells:
+  - Telnet (non-secure) operates on port 23.
+  - SSH (secure) operates on port 22.
+- Learn that HTTPS incorporates SSL (Secure Sockets Layer) and TLS (Transport Layer Security) for secure communication.
+
+**Network Models**
+- Study the OSI Model and the TCP/IP Model to understand network architecture and protocols.
+  - UDP (User Datagram Protocol) sends data without ensuring delivery efficiency, making it faster.
+  - TCP (Transmission Control Protocol) ensures data delivery by tracking transfers, making it slower.
+- Learn about Active Directory, which allows multiple systems to be managed by a single server.
+
+**Basic Linux Commands and Packages**
+- Familiarize yourself with essential Linux commands and packages for navigating and managing files and directories:
+  - Navigation: `cd`, `cd ..`, `cd FolderName`
+  - Listing files: `ls -la`, `ll -a`
+  - File operations: `touch`, `echo`, `nano`, `cat`, `mkdir`, `rmdir`, `rm`
+  - Superuser operations: `sudo`, `su`
+  - System information: `hostname`, `whoami`, `man`
+  - Screen management: `clear`
+  - File operations: `mv`, `cp`, `pwd`
+  - File content: `head -n __`, `tail -n __`
+  - Network: `ip a`, `service ___ start/stop/status`
+  - Tools: `exiftool`, `foca-cli -f ____`, `strings`,`grep` , `whois _____`, `dig _______`, `nslookup -type=TXT _____`, `amass enum -d ____`, `dnsenum ______`, `dnsrecon -d ______`, `fierce -dns ______`, `nc -v ____ 80`
+
+### DAY 3
+
+**Protocol and Software Installation**
+- Study the TCP/IP Protocol suite to understand how data is transmitted over the internet.
+- Install essential software tools:
+  - MobaXterm for remote network computing.
+  - Packet Tracer for network simulation and visualization.
+
+**Internet Protocols and Ports**
+- Learn about various internet protocols and their associated ports:
+  - FTP: ports 20, 21
+  - TFTP: port 69
+  - SSH: port 22
+  - TELNET: port 23
+  - SMTP: port 25
+  - HTTP: port 80
+  - HTTPS: port 443
+  - NTP: port 123
+  - NETBIOS: ports 135, 136, 137, 138, 139
+  - SNMP: ports 381, 382, 383
+  - LDAP: port 389
+  - RDP: Port 3389
+  - SQL SERVER: ports 1433, 1434
+  - Understand that ports are used to identify specific processes or services, with a total of 65535 ports available. Ports 0-1023 are well-known, and higher ports are available for custom use.
+
+**DNS and IP Addressing**
+- Study DNS (Domain Name System), which translates domain names into IP addresses.
+  - IPv4: 32-bit address
+  - IPv6: 128-bit address
+  - MAC Address: 48-bit address
+
+**IPv4 Configuration**
+- Understand the configuration of IPv4 addresses, including:
+  - Static vs. Variable IPs
+  - Public vs. Private IPs
+  - APIPA (Automatic Private IP Addressing)
+  - NAT (Network Address Translation) for public to private IP conversion
+
+**Classful IP Addressing**
+- Learn the different classes of IP addresses:
+  - Class A: 0 to 127 | Subnet: 255.0.0.0 | Example: 10.133.132.128/8
+  - Class B: 128 to 191 | Subnet: 255.255.0.0 | Example: 143.143.132.128/16
+  - Class C: 192 to 223 | Subnet: 255.255.255.0 | Example: 192.168.100.128/24
+  - Class D: 224 to 239
+  - Class E: 240 to 255
+
+**Subnetting Examples**
+1. 16.16.16.1/11
+   - Subnet Mask: 255.224.0.0
+   - Number of IPs: 2^21 = 2097152
+
+2. 109.101.1.9/13
+   - Subnet Mask: 255.248.0.0
+   - Number of IPs: 2^19 = 524288
+
+3. 189.14.14.1/31
+   - Subnet Mask: 255.255.255.254
+   - Number of IPs: 2^1 = 2
+
+**Packet Tracer**
+- Use Packet Tracer to create and simulate networks:
+  - Connect machines to a server
+  - Perform subnetting
+  - Connect devices and assign IPs via DHCP
+  - Create IP pools and assign IPs
+
+**Miscellaneous Topics**
+- Subdomains
+- CMOS and BIOS
+- APIs and API Keys
+
+### DAY 4
+
+**Network Scanning and Enumeration**
+- Understand the different states of network ports: Open, Closed, and Filtered.
+- Learn about ASN (Autonomous System Number) and BGP (Border Gateway Protocol) for network routing.
+- Use `robots.txt` for controlling web crawling and indexing.
+- Install and use the SHODAN Chrome Extension for internet-connected device searches.
+- Learn about CDNs (Content Delivery Networks) for distributed content delivery.
+
+**Linux System Files**
+- `/etc/hosts`: File for IP mapping.
+- `/etc/passwd`: File containing user information.
+- `/etc/shadow`: File containing user passwords.
+- `ssh` directory: Contains SSH configuration and keys.
+- Windows equivalent of password storage: `samFile`.
+
+**Hashes and Decryption**
+- Understand hash functions and their use in security.
+- Use platforms like hashes.com, crackstation, and cyberchef for hash decryption.
+- Check for email breaches using haveibeenpawned.com.
+- Use search engines like Yandex for information gathering.
+
+**Metadata and Steganography**
+- Use `exiftool` to extract metadata from images.
+- Understand the concepts of absolute and relative paths in file systems.
+- Learn steganography to hide information within other files.
+- Utilize company Wall of Fame pages for information gathering.
+
+**OSINT (Open Source Intelligence)**
+- Perform passive information gathering using tools like ZoomEye, Shodan, and Censys.
+- Engage in active information gathering using tools like NMAP or MASSCAN.
+
+**NMAP Commands/Add-Ons**
+- `nmap <target>`
+- `nmap -sS <target>`: TCP SYN scan
+- `nmap -sn <target>`: Ping scan
+- `namp -d <target>` : increase debugging level
+- `nmap -sV <target>`: Version detection
+- `nmap -v <target>`: Verbose output
+- `nmap -p 80 <target>`: Scan port 80
+- `nmap -p 1-80 <target>`: Scan port range 1-80
+- `nmap -sC <target>`: Scan with default scripts
+- `nmap -A <target>`: Aggressive scan
+- `nmap --script=scriptname <target>`: Scan with custom script
+
+### DAY 5
+
+**DNS Lookup and Enumeration **
+- Perform WHOIS lookups to get domain registration details.
+- Analyze DNS records to understand domain configurations.
+- Perform email lookups to gather information about email addresses.
+- Use `whois` command to get domain details.
+- Use ICANN's lookup service: `https://lookup.icann.org/`
+- Use `dig` command for DNS queries.
+- Use `nslookup -type=TXT <domain>` command for DNS TXT records.
+- Utilize tools like mxtoolbox.com for DNS and email server testing.
+- Understand TTL (Time to Live) in DNS records.
+- Use The Harvester tool for gathering emails and subdomains: `theHarvester -d example.com --source google`
+- Explore hunter.io for email gathering (premium).
+- Use Phonebook.cz/Intelligence_X for info gathering.
+- Use subdomainfinder.c99.nl for subdomain discovery.
+- Utilize amass for subdomain enumeration.
+- Install clearbit Chrome extension for additional information gathering.
+- Use reverse email lookup sites like pipl.com and spokeo.com.
+- Note that author details are often saved in the metadata of PDFs and Word documents.
+- Extract metadata with `exiftool`.
+- Use `foca-cli` for metadata extraction.
+- Use binwalk for metadata extarction.
+- Check metadata at metadata2go.com.
+- Analyze files for viruses at virustotal.com.
+- Learn that macros can be embedded in PDFs and DOCX files.
+
+**DNS Record Types**
+- A Records: ipv4 records
+- AAAA Records: ipv6 records
+- CNAME Records: Canonical Name Records
+- MX Records: Mail Exchange records
+- NS Records: Name Server Records
+- PTR Records: Pointer Records
+- SOA Records: Start of Authority Records
+- SRV Records: Service Location Records
+- TXT Records: Text Records
+
+**DNS Enumeration**
+- Understand the different DNS record types: A, MX, NS, TXT
+- Use tools like `dnsenum`, `dnsrecon`, and `fierce` for DNS enumeration.
+- Subdomain enumeration tools include sublist3r and amass.
+- FQDN (Fully Qualified Domain Name) concept.
+- Use Gobuster.
+
+**Reverse Email Lookup
+-SEON chrome extension
+-COCO finder
+
+**Virus Detection Methods**
+- Signature-Based detection
+- Behavior-Based detection
+
+**Network Enumeration**
+- Recognize URL path traversal vulnerabilities: something.com/../../../../../../ls
+- Perform banner grabbing using netcat, wget, or curl.
+- `nc -v <target> 80` for banner grabbing.
+- Use netstat
+
+**Vulnerabilities and Scoring**
+- Learn about CVE (Common Vulnerability Exposure) for known vulnerabilities.
+- Understand CVSS (Common Vulnerability Scoring System) for vulnerability assessment.
+
+**Users & Permissions**
+- Read ->    r -> 4
+- Write ->   w -> 2
+- Execute -> x -> 1
+
+**status codes**
+ - Informational Responses (100-199)
+ - Successful Responses (200-299)
+ - Redirection Messages (300-399)
+ - Client Error Responses (400-499)
+ - Server Error Responses (500-599)
+
+
+### Week 2 | DAY 6
+
+**Information Gathering**
+- Network Pivoting
+- Data X Filteration (bring out data from the victim side)
+- Dumpster-Diving ( Physically go the dumpyard and find paper | Like in whoami )
+- GDPR (General Data Protection Regulation)
+- HIPPA (Health Insurance Portability and Accountability Act)
+- PCIDSS (Payment Card Industry Data Security Standard )
+- SHODAN is called the 	`Search Engine of IOTs`
+- Use Spokeo (Site) for lookups.
+- Use publicrecordsreports.com for criminal/simple records.
+- use https://ipinfo.io/ for domain search.
+
+### DAY 7
+ 
+ - Intelligent Life cycle:
+ 1) Planning and Direction 
+ 2) Collection 
+ 3) Processing and Exploitation 
+ 4) Analysis and Production 
+ 5) Dissemination and Integration
+ 
+- Use Github, Bishopfox.com, Google-Hacking-Database and Telegram for finding exploits. 
+- Sock Puppets: Fake Accounts/Identities for OSINT
+- For searching use : Google, Yandex, Baidu, DUckDuckGO
+- Use site indexes for direct file accessing.
+ 
+ - Google Dorks:
+ 	-> filetype:
+ 	-> site:
+ 	-> inurl:
+ 	-> intitle
+	-> intext:
+	-> use + to combine two dorks
+
+- For email identifying, use: 
+	-> emailhippo.com
+	-> email-checker.net
+
+- Hunting Passwords:
+	-> weleakinfo.io
+	-> leakcheck.io
+	-> snusbase.com
+	-> seylla
+
+- Hunting Username:
+	-> namechk.com
+	-> whatsmyname.app
+	-> namecheckup.com
+
+- Web Scrapping via Python
+	-> BeautifulSoap
+	-> Scrapy
+	-> Selenium
+	-> Octoparse
+	-> Headless browsers like puppeteer
+	
+- Geo Location and IP tracing: 
+	-> ip2location (paid)
+	-> maxmind geoip2
+	-> ipinfo
+	
+	-> traceroute
+	-> tracert
+	-> 
+- Using Wireshark
+- Using Ettercap
+- Using NMAP
+- Use netstat
+
+###Day 8
+
+- Complete maximum tryHackMe Career Paths
+- Using GoBuster
+- People's OSINT
+	-> Telegram: The Hackers News
+	-> Telegram: Pwn3rzs
+	-> 
+- Phishing + types
+- Vishing
+- Pharming
+- Evil Twin
+- Whaling
+- Watering Hole
+- Clone Phishing
+- Smishing
+
+	-> GoPhish
+	-> SeToolkit
+- 
+- C2 = CNC = Command and Control Server
+- 
+### Day 9
+
+- SE Toolkit Payloads
+- Metasploit
+- Port Forwarding and Port Mapping
+- Download Process-Hacker for windows
+- GoPhish
+- Dark Web Introduction
+- Tor, DuckDuckGo, Ahmia, Torch, The Hidden Wiki, NotEvil
+- "Hosts" Github Repo : https://github.com/StevenBlack/hosts
+- 65 Layers are needed for live stream
+
+### Day 9
+
+- Threat Intelligence: Info about current threats.
+- Tools for Threat Intelligence: AlienVault OTX 
+- Integration with: WUZU, Splunk, Security Onion
+- osintframework.com
+- Github: lockfale/OSINT-FRAMEWORK
+- Visualize Osint Data: 
+	-> Network Graphs
+	-> heat Maps
+	-> Tools: Maltego, GephiRecon
+	
+- *** OSINT for Digital Forensics ***
+- Autopsy for Android and Windows
+- Celebright-Reader for IOS forensics
+- Recon-ng , SpiderFoot, Shodan, TheHarvester
+- VirusTotal.com, Cymon, MISP, AlienVault OTX
+- For Reverse Engineerin use Ghidra (Assembly tool)
+- NahamCon.com for Reverse Engineering CTFs
+- 
+- 
+
+I Missed Day 10 :(
+
+### DAY 11 - Week 3
+
+- Making a Pentesting Report
+- Hardening the system: Tightening the security
+- Bypass WAF using NMAP
+- Nmap : 
+    1) Host Discovery -> ICMP echo request , -sn arguement in NMAP
+    2) Open Ports Scan
+    3) TCP/UDP Scans
+    4) -sS argument in NMAP / Stealth Mode / SYN Scan
+
+- TCP Scan is SYN, i.e. 3way handshake scan
+- More Tools: Angry Ip Scanner, NMAP, ZENMAP, MASSCAN 
+- Scan types: Ping Scan, SYN Scan, ACK Scan, FIN Scan, Xmas Scan
+- RST Packets
+- XMAS SCAN : -sX argument in NMAP
+- Vuln Scanning Tools: Nessus, OpenVAS, Qualys
+
+### DAY 12
+
+- Detect OS
+	-> NMAP, P0f, Xprobe2
+	-> OwaspZap for sites
+	-> Nessus
+
+- CICD, Continues Integration Continues Development
+
+- XSS and SQL Scanning for web Apps
+	-> SQL Injection | SQLMAP
+	-> XSS
+	-> 
+	-> XSStrike
+	
+- secList github repo
+- PayloadAllTheThings.com
+- Vault7 osint
+- Parameter Dorking
+- defacer, reverse-shell in sqlmap
+- types of sql injection
+- Using Acunetix
+- Using BurpSuite
+- SIEM Tools & Integrations | Using Wazuh | Using SecurityOnion | Using Snort
+- 
+- Using PFSense Firewall
+- CCMP
+- Aircrack-ng
+- Wif Slacks OS
+
+### DAY 13
+
+- Automated Scanning with OwsapZ
+- Find code vulnerabilities with 'Snyk' | Install it on Github 
+- Secure coding via snyk
+- Use dirbuster to find directories
+- portswigger academy for 'burpsuite'
+- Make a Bash/Python script to make run a scan via all tools
+- Best Practices for scanning
+- visit cisecurity.org
+- Full Backup | Incremental Backup | Differential Backup
+
+- Post Scanning Analysis
+	-> Review the results of the scanning 
+	-> Plan for Remidiation
+	-> MITM6 Attack on IPV6
+
+- Reporting Tools: Nessus, Qualys etc
+- Threat Modeling:
+- Rapid7
+
+- Scanning for Insider Threads
+	-> Monitor Internal Network Activities
+	-> Use SIEM like Wazuh, SecurityOnions
+	-> Access Monitoring
+	-> Use Splunk.com , Varonis
+	
+### Day 14 	
+
+- CTF
+- SSH : ssh username@server
+- SSH Bruteforce: Hydra
+- SNMP Enumeration
+- Tools: SNMPWalk, SNMPCheck, Solar*****
+- LDAP
+- Tools: ldapsearch, jXplorer, Softerra LDAP Browser
+- SMB
+- Tools: enum4linux, smbclient, NMAP
+- DNS Enumeration
+- Tools: sublist3r, nslookup, dig, DNSRecon
+- SMTP (IMAP & POP3)
+- Tools: Telnet, smtp-user-enum, Metasploit(SMTP Enumeration Modules)
+- NTP
+- Tools: 
+- RDP Enumeration
+- Tools: 
+- Port Enumeration
+- Tools: NMAP, ZENMAP, AngryIpScanner
+- User Enumeration
+- Tools: Metasploit, Burpsuite, WPScan
+- Share Enumeration
+- Tools: smbclient, enum4linux, NMAP
+- Vulnerability Enumeration
+- Tools: zap, burpsuite, acunetix
+
+### Day 14
+
+- https://gtfobins.github.io/ for privilege escalations
+- linux enum tool by tcm security
+- CyberGhost Chrome Extension
+- steganography
+- Morse Codes
+- Scammers Online - YouTube Channel
+- 0 Click Exploits
+- Pass the Hash Attack
+- PasteBin -> Data Leaks
+- RDP Port: 3389
+- https://start.me/p/8yQwY0/pen-testing-red-team
+- countryipblocks.net
+- BloodHound - Active Directory Tool
+- https://hacksnation.com/ 
+- SearchSploit for kali | Used to find exploits from ExploitDB
+- Find RCE | Remote Code Execution in Target Machine | Site
+- Scan Cron-Jobs in Linux for Privilege Escalation 
+- Find Running Tasks via PS AUX in linux
+- Earthcam.com for public cameras 
+
+
+###DAY 15 -> Missed
+
+###DAY 16
+
+- SMB Exploitation
+- Eternal Blue
+- Eternal Romance
+- Message Signing Enabled Vulnerability
+- Using NSE Scripts
+- Using Eternal Blue via MSFVENOM to get reverse shell of vulnerable windows machines
+- Do the THM "BLUE" Room
+- Active Directory
+- Domains and Domain Controllers in AD
+- NET-NTLM Authentication & Kerberos Authentication
+- Group Policies
+
+#DAY 17
+**Linux Tools**
+
+hydra
+nmap
+netdiscover
+johntheripper
+wpscan
+sqlmap
+phonesploit
+xfreerdp
+
+**windows**
+
+Wireshark
+HashCalc
+Veracrypt
+bctextencoder
+cryptool
+snow
+openstago
+md5calc
+
+**CEH Practice Labs**
+
+ILABS - Paid | Best THM
+
+###DAY 18
+--missed--
+
+- Install Cypher Rat
+- 
+
+#DAY 19
+-> Password Cracking Techniques
+-> Linux Privilege Escalation Scripts: WinPeas, LinPeas, WinExploitSuggestor, LinuxExploitSuggestor
+
+- Pass the Hash Attack
+- Attack Types: BruteForce, Dictionary/WordList, RainbowTables, CredentialStuffing, PassTheHash 
+- Tools: JohnTheRipper, Hydra, Hashcat, Cain, Abel, Medusa, Aircrack-ng, ceWL, hash-indentifier
+- WordLists: RockYou, SecList
+- 
+- ***Cracking Windows Password***
+- NTLM, Kerberos password hashing
+- samFile: C:\Windows\System32\config
+- LLMNR Posoning in AD Environment -> Tool: Responder
+- Tools: Mimikatz, ophcracks
+
+***Windows Privilege Escalation***
+- DLL Hijacking
+- 
+- 
+- 
+
+***Linux Privilege Escalation***
+- Analyzing SUID and GUID
+- Sudo Exploitation
+- 
+- 
+
+Rooms: Windows Privilege Escalation,Linux Privilege Escalation, LinPeas, WinPeas, WinExplitSuggestor, LinuxExplitSuggestor, PawnKit, DirtyCow, CVE-2021-41773, sudovulnsbypass(Sudo Sec Bypass)
+
+***RootKits and Trojans***
+- Tools: Rootkit Hunter, chkrootkit, Trojan.Win32.Generic
+
+***Hiding Files and Processes***
+- Tool: Timestomp, Stealth Root, Hidden Tear
+- Dropper Malware
+- Pegasus
+- Hiding in NTFS files
+- Being invisible from task manager
+- HackRF Device for Intercepting Calls
+
+***Covering Tracks and Removing Evidence***
+- Remove Logs
+- Crash the log making process
+
+
+#DAY 20
+
+- CIA Tier
+- Encryption:Uses a Key + Reversible | Encoding: Reversible | Hashing: non-Reversible
+- Hashing Algos: MD-5, SHA-1, SHA-256, SHA-512, Crypt
+- hash Text: Encrypted Text
+- Custom Wordlist generation via Crunch
+- ROOMS: intro to cryptography, Crack the hash level 1 & 2
+
+#DAY 21
+
+- nikto
+- phishing tools: ZPhisher, MaxPhisher, GoPhish
+- Docker
+- screen command in linux | screen, screen + ctrl + A + D | screen -ls | screen -r ____
+- playit.gg for forwarding
+
+--- Week 5 ---
+
+- APackets.com //for pcap file analysis
+- Ghidra.com //reverse engineering
+- hMailServer (tool) //creating mail server for windows
+
+------ Week 6 ------
+__TOOLS__
+- SNORT and SURICATA
+- ZEEK and SECURITY ONION
+- Ligolo-NG for Pivoting
+- Making a network Sniffer
+- HPING3 for Flooding and DOS
+- MHDDOS (github) for DOS
+- Packet Fragmentation (TOPIC)
+
+
+- InSSIDer (for Windows)
+- 1-11 Channels
+- Wireless Attacks
+- SSID vs BSSID
+- Using NetStumbler (for  Windows)
+- Using Kismet
+- Using Reaver
+- War-driving
+- GPS Mapping
+
+
+------- Week 8 -------
+- LOIC for DDOS
+- HOIS for DDOS
+- MHDDOS for DDOS
+- hping3 for DDOS
+- slowLoris 
+- 
+- 
+- 
+- Commix - Used to find LFI, EFI vulns
+- CMESMB - SMB Password Sprayer
+- AD ATTACKS
+ 	pass the hash
+ 	pivoting
+ 	
+ 	
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
